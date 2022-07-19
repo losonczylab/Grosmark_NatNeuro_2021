@@ -8,6 +8,8 @@ These functions were used to assess sequence replay in the study:
 
 These Matlab functions perform 1) Bayesian decoding analysis (Zhang et al. 1998) 2) Linear Weighted correlation replay analysis (Wu & Foster, 2014), 3) Circo-Linear weighted correlation replay analysis (Grosmark et al. 2021) and 4) Line casting (or Radon) replay analysis (see Davidson et al. 2009, here also adapted to circular replay).
 
+In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvolution and thresholding (see Methods) and are designed to be equally applicable spike-deconvolved Ca2+ analysis as well as to electrophysiologically recorded spike analysis - they do not however work for the analysis of continous signals (for instance, Df over F).
+
 ## Requirements:
 
 Matlab (tested on versions 2018a and 2022a), and the Matlab ‘Image Processing’ and ‘Statistics and Machine Learning’ toolboxes.
