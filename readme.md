@@ -26,7 +26,7 @@ Clone or download this repository then add the folder to your path (or run files
 
 1.  **‘demo_LinearReplayAnalysis.m’** – performs linear (weighted and line-casting) replay analysis on 5 synthetic replay event created by ‘createSyntheticEvents.m’ and plots the results.
 
-2.  *‘***demo_CircularReplayAnalysis.m***’* – performs circo-linear (weighted and line-casting) replay analysis on 5 synthetic replay event created by ‘createSyntheticEvents.m’ and plots the results.
+2.  **'demo_CircularReplayAnalysis.m'** – performs circo-linear (weighted and line-casting) replay analysis on 5 synthetic replay event created by ‘createSyntheticEvents.m’ and plots the results.
 
 ## Key functions:
 
