@@ -1,3 +1,5 @@
+![Circular replay analysis](https://github.com/losonczylab/Grosmark_NatNeuro_2021/blob/main/demo_CircularReplayAnalysis_Figure.jpg)
+
 # Linear and Circular Trajectory Replay Analysis
 
 Author: Andres Grosmark 2021
