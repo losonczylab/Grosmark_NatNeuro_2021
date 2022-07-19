@@ -16,7 +16,9 @@ In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvoluti
 
 ## Requirements:
 
-Matlab (tested on versions 2018a and 2022a), and the Matlab ‘Image Processing’ and ‘Statistics and Machine Learning’ toolboxes.
+- Matlab (tested on versions 2018a and 2022a), 
+- Image Processing Toolbox
+- Statistics and Machine Learning Toolbox
 
 ## How to run this code:
 
