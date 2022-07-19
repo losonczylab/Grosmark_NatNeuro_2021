@@ -1,4 +1,4 @@
-![Circular replay analysis](demo_CircularReplayAnalysis_Figure.jpg)
+<img src="demo_CircularReplayAnalysis_Figure.jpg" alt="Circular replay analysis" width="700"/>
 
 # Linear and Circular Trajectory Replay Analysis
 
