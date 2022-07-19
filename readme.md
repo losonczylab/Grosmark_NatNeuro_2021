@@ -25,6 +25,7 @@ In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvoluti
 Clone or download this repository then add the folder to your path (or run files from within folder). The functionality of these analysis functions is demonstrated by two ‘demo’ scripts:
 
 1.  **‘demo_LinearReplayAnalysis.m’** – performs linear (weighted and line-casting) replay analysis on 5 synthetic replay event created by ‘createSyntheticEvents.m’ and plots the results.
+
 2.  *‘***demo_CircularReplayAnalysis.m***’* – performs circo-linear (weighted and line-casting) replay analysis on 5 synthetic replay event created by ‘createSyntheticEvents.m’ and plots the results.
 
 ## Key functions:
