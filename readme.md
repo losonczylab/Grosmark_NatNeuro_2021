@@ -21,13 +21,13 @@ Clone or download this repository then add the folder to your path (or run files
 
 ## Key functions:
 
-***'placeBayesLogBuffered’** – performs Bayesian decoding analysis
+-**'placeBayesLogBuffered’** – performs Bayesian decoding analysis
 
-***'calcWeightedLinearCorr’** – performs linear weighted correlation analysis
+-**'calcWeightedLinearCorr’** – performs linear weighted correlation analysis
 
-***'calcWeightedCircCorr’** - performs circo-linear weighted correlation analysis
+-**'calcWeightedCircCorr’** - performs circo-linear weighted correlation analysis
 
-***'calcRadonReplay’** – performs ‘line-casting’ (Radon transformation) replay analysis
+-**'calcRadonReplay’** – performs ‘line-casting’ (Radon transformation) replay analysis
 
 Note that unlike the linear correlation analysis, the results of the circo-linear correlation analysis are not signed (i.e. are always positive) and therefore the Radon transform analysis is used to disambiguate between forward and reverse replay events.
 
