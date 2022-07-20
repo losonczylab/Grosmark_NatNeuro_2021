@@ -15,8 +15,6 @@ These Matlab functions perform:
 4) Line casting (or Radon) replay analysis (see Davidson et al. 2009, here also adapted to circular replay as in Grosmark et al. 2021).
 5) Derive statistical confidence bounds by comparing observed results to 4 types of shuffled events
 
-In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvolution and thresholding (see Methods) and are designed to be equally applicable spike-deconvolved Ca2+ analysis as well as to electrophysiologically recorded spike analysis - they are not directly suited for the analysis of continous signals (for instance, Df over F).
-
 ## Requirements:
 
 - Matlab (tested on versions 2018a and 2022a), 
@@ -45,7 +43,9 @@ Clone or download this repository then add the folder to your path (or run files
 
 -**'createSyntheticEvents’** – creates synthetic replay events for testing out the functions above
 
-### Notes:
+## Notes:
+In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvolution and thresholding (see Methods) and are designed to be equally applicable spike-deconvolved Ca2+ analysis as well as to electrophysiologically recorded spike analysis - they are not directly suited for the analysis of continous signals (for instance, Df over F).
+
 Unlike the linear correlation analysis, the results of the circo-linear correlation analysis are not signed (i.e. are always positive) and therefore the Radon transform analysis is used to disambiguate between forward and reverse replay events.
 
 Input-output details, notes and citations are provided in the help for each of the functions.
