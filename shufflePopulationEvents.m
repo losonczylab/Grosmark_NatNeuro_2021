@@ -1,5 +1,70 @@
 function [shuffledEvents, newRateMatrix] = shufflePopulationEvents(shuffleType, varargin)
-%% shuffleTypes = 'timeBinPermutation', 'withinEventActiveCellIDPermutation', 'crossEventPoissonSurrogate', 'circularPlaceFieldShuffle'
+% function [shuffledEvents, newRateMatrix] = shufflePopulationEvents(shuffleType, varargin)
+% Creates shuffled (or synthetic versions) of population activity events. There are
+% four types of shuffle implemented (the choice must be inputed as a string as the first
+% positional input argument:
+%       1) 'timeBinPermutation': permutes (resamples without replacement)
+%                   Bayesian posterior estimates across the time bins within an event
+%                    -Required string-value pair inputs: 'bayesPostProb' and 'binIDs'
+%
+%       2) 'withinEventActiveCellIDPermutation': shuffles the IDs of only
+%                   those subset of cells active within an event, and then re-performs 
+%                   the Bayesian decoding on these shuffled ids
+%                   -Required string-value pair inputs:
+%                   'eventFiringRateMatrix', 'binIDs',
+%                   'rateByPositionMatrix', 'eventBinDuration'
+%
+%       3) 'crossEventPoissonSurrogate': creates a new set of synthetic
+%                   randomly generated using Poisson distributions whos
+%                   rate parameters match those of the observed cells
+%                   across events. This is performed in an event (rather
+%                   than rate) based way by first multiplying the rate by the
+%                   'eventBinDuration' scalar. Note: I do not think this is
+%                   a particularly good shuffle because spiking is not
+%                   strictly speaking Poisson in general, and particularly
+%                   not so within events which are typically artifically
+%                   selected to have high firing rates (see Grosmark &
+%                   Buzsaki 2016, Fig S8). However, since this was the
+%                   method used in an influential study (Silva et al. 2015)
+%                   the method is included here.
+%                   -Required string-value pair inputs:
+%                   'eventFiringRateMatrix', 'binIDs',
+%                   'rateByPositionMatrix', 'eventBinDuration'
+%
+%       4) 'circularPlaceFieldShuffle': randomly circularly rotates the
+%                   place fields and recomputes the Bayesian posteror
+%                   decoding (see Grosmark & Buzsaki 2016) 
+%                   -Required string-value pair inputs:
+%                   'eventFiringRateMatrix', 'rateByPositionMatrix',
+%                   'eventBinDuration'
+%
+% Inputs:
+%       Positional: 
+%           String indicating the shuffle type (see above)
+%       String-value pair arguments: (different shuffle types require
+%               a different subset of inputs, or all inputs can be
+%               provided)
+%           'bayesPostProb' - [nTimeBin X nSpatialBin] matrix of Posterior
+%                   probabilities (see 'placeBayesLogBuffered')
+%           'binIDs' - [nTimeBin X 1] column vector of the unique numeric
+%                   ids indicating which event each of the time bins
+%                   correspond to.
+%           'eventFiringRateMatrix' - [nTimeBin X nCell] matrix of
+%                   within-event by-time-bin firing rates
+%           'rateByPositionMatrix' - [nCell X nSpatialBin] matrix of firing
+%                   rates by position (place fields)
+%           'eventBinDuration' - scalar duration (in seconds) of the bins
+%                   within each event.
+%
+%   Output:
+%       'shuffledEvents' -  [nTimeBin X nSpatialBin] matrix of shuffled
+%               Posterior probabilities
+%       'newRateMatrix' - for shuffle types that create new or shuffled
+%               event firing rates ('withinEventActiveCellIDPermutation &
+%               'crossEventPoissonSurrogate') the shuffled rate matrix is
+%               also output, in other cases this output is left empty.
+% 
+%  Written by Andres Grosmark in 2021
 
 bayesPostProb = [];
 binIDs = [];
@@ -96,9 +161,3 @@ switch lower(shuffleType)
        end
        shuffledEvents = placeBayesLogBuffered(eventFiringRateMatrix, rateByPositionMatrixShuffle, eventBinDuration);
 end
-
-
-
-
-
-
