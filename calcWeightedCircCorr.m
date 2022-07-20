@@ -3,7 +3,7 @@ function [circCorrCoeff] = calcWeightedCircCorr(xy, w)
 % Calculate the correlation between one linear variable (x) and one
 % circular variable (y) as weighted by the weight matrix (w)
 % Input: 
-%   'xy': a two column vector where each row corresponds to the particular
+%   'xy': a two column matrix where each row corresponds to the particular
 %       [x, y] coordinate of one element in the linearized weight vector w
 %       Note: y must be circular variable in radians (between 0 and 2*pi) 
 %   'w': a column vector of linearized weights (typically the previously
