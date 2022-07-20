@@ -45,6 +45,7 @@ Clone or download this repository then add the folder to your path (or run files
 
 -**'createSyntheticEvents’** – creates synthetic replay events for testing out the functions above
 
-Note that unlike the linear correlation analysis, the results of the circo-linear correlation analysis are not signed (i.e. are always positive) and therefore the Radon transform analysis is used to disambiguate between forward and reverse replay events.
+### Notes:
+Unlike the linear correlation analysis, the results of the circo-linear correlation analysis are not signed (i.e. are always positive) and therefore the Radon transform analysis is used to disambiguate between forward and reverse replay events.
 
 Input-output details, notes and citations are provided in the help for each of the functions.
