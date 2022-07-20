@@ -2,7 +2,7 @@ function out = calcWeightedLinearCorr(xy, w);
 % function out = calcWeightedLinearCorr(xy, w);
 % Calculate linear weighted correlations
 % Inputs:
-%   'xy': a two column vector where each row corresponds to the particular
+%   'xy': a two column matrix where each row corresponds to the particular
 %       [x, y] coordinate of one element in the linearized weight vector w
 %   'w': a column vector of linearized weights (typically the previously
 %       computed Bayesian posterior probability estimates)
