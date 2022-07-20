@@ -31,17 +31,17 @@ Clone or download this repository then add the folder to your path (or run files
 
 ## Key functions:
 
--**'placeBayesLogBuffered’** – performs Bayesian decoding analysis
+* **'placeBayesLogBuffered’** – performs Bayesian decoding analysis
 
--**'calcWeightedLinearCorr’** – performs linear weighted correlation analysis
+* **'calcWeightedLinearCorr’** – performs linear weighted correlation analysis
 
--**'calcWeightedCircCorr’** - performs circo-linear weighted correlation analysis
+* **'calcWeightedCircCorr’** - performs circo-linear weighted correlation analysis
 
--**'calcRadonReplay’** – performs ‘line-casting’ (Radon transformation) replay analysis
+* **'calcRadonReplay’** – performs ‘line-casting’ (Radon transformation) replay analysis
 
--**'shufflePopulationEvents’** – performs various (see help) types of shuffling analysis on candidate replay events
+* **'shufflePopulationEvents’** – performs various (see help) types of shuffling analysis on candidate replay events
 
--**'createSyntheticEvents’** – creates synthetic replay events for testing out the functions above
+* **'createSyntheticEvents’** – creates synthetic replay events for testing out the functions above
 
 ## Notes:
 In Grosmark 2021 these methods were applied to Ca2+ data after spike-deconvolution and thresholding (see Methods) and are designed to be equally applicable spike-deconvolved Ca2+ analysis as well as to electrophysiologically recorded spike analysis - they are not directly suited for the analysis of continous signals (for instance, Df over F).
