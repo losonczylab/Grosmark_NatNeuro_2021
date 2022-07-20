@@ -41,7 +41,7 @@ Clone or download this repository then add the folder to your path (or run files
 
 -**'calcRadonReplay’** – performs ‘line-casting’ (Radon transformation) replay analysis
 
--**'shufflePopulationEvents’** – performs various (see help) types of shuffling analysis on particular events
+-**'shufflePopulationEvents’** – performs various (see help) types of shuffling analysis on candidate replay events
 
 -**'createSyntheticEvents’** – creates synthetic replay events for testing out the functions above
 
