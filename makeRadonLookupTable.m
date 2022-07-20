@@ -14,7 +14,7 @@ function out = makeRadonLookupTable(nSpatialBins, nTemporalBins)
 %           spatial-bin-number values)
 %       'nTemporalBins': (positive integer vector) containing a list of the
 %           unique number of temporal-sub-bins in each event. 
-% Output: RadonLookUpTable structure.
+% Output: RadonLookUpTable cell array of structures.
 %
 % Written by Andres Grosmark in 2021
 
