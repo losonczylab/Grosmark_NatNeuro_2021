@@ -56,7 +56,7 @@ function [shuffledEvents, newRateMatrix] = shufflePopulationEvents(shuffleType, 
 %           'eventBinDuration' - scalar duration (in seconds) of the bins
 %                   within each event.
 %
-%   Output:
+% Outputs:
 %       'shuffledEvents' -  [nTimeBin X nSpatialBin] matrix of shuffled
 %               Posterior probabilities
 %       'newRateMatrix' - for shuffle types that create new or shuffled
@@ -64,7 +64,7 @@ function [shuffledEvents, newRateMatrix] = shufflePopulationEvents(shuffleType, 
 %               'crossEventPoissonSurrogate') the shuffled rate matrix is
 %               also output, in other cases this output is left empty.
 % 
-%  Written by Andres Grosmark in 2021
+% Written by Andres Grosmark in 2021
 
 bayesPostProb = [];
 binIDs = [];
